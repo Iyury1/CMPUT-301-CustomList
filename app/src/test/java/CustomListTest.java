@@ -38,4 +38,13 @@ public class CustomListTest {
         list.deleteCity(city);
         assertEquals(false, list.hasCity(city));
     }
+
+    @Test
+    public void testCountCities() {
+        City city1 = new City( "Charlottetown" , "Prince Edward Island" ) ;
+        City city2 = new City( "Some other town" , "Prince Edward Island" ) ;
+        list.addCity(city1);
+        list.addCity(city2);
+        assertEquals(list.getCount(), 2);
+    }
 }
